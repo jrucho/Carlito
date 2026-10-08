@@ -1,0 +1,87 @@
+{
+  "title": "Carlito - answer settings",
+  "env": "carlito.env",
+  "fields": [
+    {
+      "key": "CARLITO_MODE",
+      "label": "Connection mode",
+      "kind": "select",
+      "options": ["auto", "online", "offline"],
+      "help": "Auto uses Gemini first and a configured local model if the internet is unavailable. Offline never contacts Google."
+    },
+    {
+      "key": "CARLITO_GEMINI_KEY",
+      "label": "Gemini API key",
+      "kind": "secret",
+      "placeholder": "AIza...",
+      "help": "Stored only on the tablet."
+    },
+    {
+      "key": "CARLITO_GEMINI_MODELS",
+      "label": "Gemini model fallback list",
+      "kind": "text",
+      "placeholder": "gemini-3.5-flash-lite,gemini-3.7-flash",
+      "help": "The fastest stable model is tried first."
+    },
+    {
+      "key": "CARLITO_WEB_SEARCH",
+      "label": "Google Search when needed",
+      "kind": "select",
+      "options": ["1", "0"],
+      "help": "When enabled, Gemini decides whether a question needs fresh web information."
+    },
+    {
+      "key": "CARLITO_MAX_TOKENS",
+      "label": "Maximum answer tokens",
+      "kind": "text",
+      "placeholder": "1400"
+    },
+    {
+      "key": "CARLITO_OFFLINE_BASE",
+      "label": "Local vision API URL",
+      "kind": "text",
+      "placeholder": "http://192.168.1.10:11434/v1",
+      "help": "Optional OpenAI-compatible endpoint for auto fallback and offline mode."
+    },
+    {
+      "key": "CARLITO_OFFLINE_MODEL",
+      "label": "Local vision model",
+      "kind": "text",
+      "placeholder": "qwen2.5vl:3b"
+    },
+    {
+      "key": "CARLITO_OFFLINE_KEY",
+      "label": "Local API key",
+      "kind": "secret",
+      "placeholder": "local"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fast online",
+      "values": {
+        "CARLITO_MODE": "online",
+        "CARLITO_GEMINI_MODELS": "gemini-3.5-flash-lite,gemini-3.7-flash",
+        "CARLITO_WEB_SEARCH": "1",
+        "CARLITO_MAX_TOKENS": "1400"
+      }
+    },
+    {
+      "name": "Online plus local",
+      "values": {
+        "CARLITO_MODE": "auto",
+        "CARLITO_GEMINI_MODELS": "gemini-3.5-flash-lite,gemini-3.7-flash",
+        "CARLITO_WEB_SEARCH": "1",
+        "CARLITO_MAX_TOKENS": "1400"
+      }
+    },
+    {
+      "name": "Local only",
+      "values": {
+        "CARLITO_MODE": "offline",
+        "CARLITO_WEB_SEARCH": "0",
+        "CARLITO_MAX_TOKENS": "1400"
+      }
+    }
+  ]
+}

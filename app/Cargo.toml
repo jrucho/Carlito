@@ -1,0 +1,23 @@
+[package]
+name = "carlito"
+version = "0.2.0"
+edition = "2021"
+license = "MIT"
+description = "A handwritten Gemini assistant with live web search for reMarkable Paper Pro Move"
+
+[dependencies]
+libc = "0.2"
+signal-hook = "0.3"
+png = "0.17"
+ab_glyph = "0.2"
+ureq = { version = "2.10", default-features = false, features = ["tls"] }
+serde_json = "1"
+
+[features]
+default = ["carlito"]
+carlito = []
+takeover = []
+
+[profile.release]
+strip = true
+lto = true
