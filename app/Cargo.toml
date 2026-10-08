@@ -1,9 +1,9 @@
 [package]
 name = "carlito"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2021"
 license = "MIT"
-description = "A handwritten Gemini assistant with live web search for reMarkable Paper Pro Move"
+description = "A fast handwritten Gemini assistant for reMarkable Paper Pro Move"
 
 [dependencies]
 libc = "0.2"

@@ -12,7 +12,8 @@ if [ -f "$HERE/carlito.env" ]; then
     set +a
 fi
 export CARLITO_MODE=${CARLITO_MODE:-auto}
-export CARLITO_WEB_SEARCH=${CARLITO_WEB_SEARCH:-1}
+# Keep the fast release behavior even when updating an older configuration.
+export CARLITO_WEB_SEARCH=0
 systemctl stop xochitl
 rm -f /tmp/epframebuffer.lock
 sleep 1

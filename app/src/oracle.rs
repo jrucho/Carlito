@@ -157,7 +157,7 @@ impl CarlitoOracle {
                 .filter(|v| !v.is_empty())
                 .unwrap_or_else(|| vec!["gemini-3.5-flash-lite".into(), "gemini-3.7-flash".into()]),
             max_tokens,
-            web_search: env_bool("CARLITO_WEB_SEARCH", true),
+            web_search: env_bool("CARLITO_WEB_SEARCH", false),
         });
         let local = std::env::var("CARLITO_OFFLINE_BASE")
             .ok()

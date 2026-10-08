@@ -1,18 +1,18 @@
-# Carlito 0.2.0 — live web search
+# Carlito 0.2.1 — fast handwritten answers
 
-- Standalone public Carlito project for Paper Pro Move.
-- Native Gemini Interactions API with Google Search enabled by default.
-- Quota fallback explicitly labels answers that could not be web-verified.
-- Citation titles and URLs displayed with answers.
+- The fast Carlito 2 configuration is now the default public release.
+- Gemini Flash-Lite answers directly, avoiding the extra request delays from
+  the preceding release.
 - Paginated handwritten answers and simple line diagrams.
+- Lightweight session context from recent assistant replies, cleared on exit.
 - Two-finger downward swipe starts a fresh session; five fingers exit.
-- Move aarch64 install bundle: no compilation required to install.
-- Keys/configuration and proprietary vendor libraries are excluded from downloads.
+- AppLoad name remains Carlito.
+- Compiled Paper Pro Move bundle: no coding or compilation required to install.
+- Your API key remains private and is not included in downloads.
 
-Verification: 14 host tests pass, including mocked search quota fallback and
-source citation handling; the aarch64 takeover binary compiled and its dynamic
-dependencies were inspected. This release has not yet been smoke-tested on the
-connected Move hardware. RM2 is not supported by this release.
+Answers use Gemini's model knowledge and do not independently verify current
+facts. Response times vary with network conditions and model load.
 
-Google Search needs an API project with available grounding quota. If quota
-rejects the request, Carlito says so and answers without live verification.
+Verification: host tests passed and the Move aarch64 takeover binary compiled;
+dynamic dependencies and release contents were checked. This new compiled
+release has not yet had an on-device writing/exit smoke test. RM2 is not supported.

@@ -24,13 +24,6 @@
       "help": "The fastest stable model is tried first."
     },
     {
-      "key": "CARLITO_WEB_SEARCH",
-      "label": "Google Search when needed",
-      "kind": "select",
-      "options": ["1", "0"],
-      "help": "When enabled, Gemini decides whether a question needs fresh web information."
-    },
-    {
       "key": "CARLITO_MAX_TOKENS",
       "label": "Maximum answer tokens",
       "kind": "text",
@@ -62,7 +55,7 @@
       "values": {
         "CARLITO_MODE": "online",
         "CARLITO_GEMINI_MODELS": "gemini-3.5-flash-lite,gemini-3.7-flash",
-        "CARLITO_WEB_SEARCH": "1",
+        "CARLITO_WEB_SEARCH": "0",
         "CARLITO_MAX_TOKENS": "1400"
       }
     },
@@ -71,7 +64,7 @@
       "values": {
         "CARLITO_MODE": "auto",
         "CARLITO_GEMINI_MODELS": "gemini-3.5-flash-lite,gemini-3.7-flash",
-        "CARLITO_WEB_SEARCH": "1",
+        "CARLITO_WEB_SEARCH": "0",
         "CARLITO_MAX_TOKENS": "1400"
       }
     },

@@ -29,16 +29,12 @@ You need developer mode, SSH access, and xovi/AppLoad already installed on your 
 If updating an existing installation, close Carlito first. Keep your existing
 `carlito.env`; the release never includes or overwrites it.
 
-## Live web search
+## Fast handwritten answers
 
-Live Google Search is **enabled by default** (`CARLITO_WEB_SEARCH=1`). Gemini
-decides when to search for fresh information. Returned citation titles and URLs
-are displayed with the answer and paginate inside the screen.
-
-Google's search allowance depends on your API project. If a search request is
-rejected for quota/rate limits, Carlito retries without search and explicitly
-states that current facts could not be verified. An internet connection alone
-does not grant search quota. Search may add latency and incur API charges.
+Carlito uses Gemini Flash-Lite for direct answers, with the fast configuration
+preferred from Carlito 2. Response time depends on your connection, Gemini's
+load, and the length of the answer. It answers from the model's knowledge;
+current details are not independently verified.
 
 ## Controls
 

@@ -1,8 +1,8 @@
 {
   "id": "carlito",
   "name": "Carlito",
-  "version": "0.2.0",
-  "description": "Handwritten answers, simple sketches and live web search for Paper Pro Move.",
+  "version": "0.2.1",
+  "description": "Quick handwritten answers and simple sketches for Paper Pro Move.",
   "application": "appload-launch.sh",
   "qtfb": false
 }
